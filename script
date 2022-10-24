@@ -107,9 +107,6 @@ Section:NewKeybind("Toggle", "Button to toggle GUI", Enum.KeyCode.E, function()
 	Library:ToggleUI()
 end)
 
-local Tab = Window:NewTab("Settings")
-local Section = Tab:NewSection("GUI")
-
 local Tab = Window:NewTab("Credits")
 local Section = Tab:NewSection("rej#0001")
 
