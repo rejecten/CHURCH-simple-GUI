@@ -110,7 +110,7 @@ end)
 local Tab = Window:NewTab("Settings")
 local Section = Tab:NewSection("GUI")
 
-local Tab = Window:NewTab("¨Credits")
+local Tab = Window:NewTab("Credits")
 local Section = Tab:NewSection("rej#0001")
 
 end
