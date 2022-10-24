@@ -1,0 +1,117 @@
+if game.placeId == 1068523756 then do
+
+wait(5)
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("CHURCH", "BloodTheme")
+
+local Tab = Window:NewTab("Player")
+local Section = Tab:NewSection("Player scripts")
+
+
+Section:NewToggle("Afk", "Fake afk", function(state)
+    if state then
+    afk = true
+
+while afk == true do
+    
+local args = {
+    [1] = true,
+}
+
+game:GetService("ReplicatedStorage").afkTog:FireServer(unpack(args))
+
+task.wait()
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Notification";
+    Text = "AFK enabled";
+    Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+Duration = 5;
+end
+else
+    afk = false
+
+while afk == false do
+    
+local args = {
+    [1] = false,
+}
+
+game:GetService("ReplicatedStorage").afkTog:FireServer(unpack(args))
+
+task.wait()
+end
+    end
+end)
+
+Section:NewToggle("Antibang", "Sum kind of antibang ig", function(state)
+    if state then
+        tp = true 
+        tp2 = true
+        while tp == true do
+            wait(1)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-508332960, 94530456, -17839920, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+            
+            while tp2 == true do
+            wait(3)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-400.0144, -463.5522, 380.8613, 0.6784, 0, -0.7347, 0, 1, 0, 0.7347, 0, 0.6784)
+            end
+         end
+        else
+            tp1, tp2 = false
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55.7147, 177, 97.4343, -0.0295, 0, -0.9996, 0, 1, 0, 0.9996, 0, -0.0295)
+            
+end
+end)
+
+Section:NewButton("Rejoin", "Rejoin button niga", function()
+    local ts = game:GetService("TeleportService")
+
+local p = game:GetService("Players").LocalPlayer
+
+ 
+
+ts:Teleport(game.PlaceId, p)
+end)
+
+
+local Tab = Window:NewTab("Teleports")
+local Section = Tab:NewSection("Teleport scripts")
+
+Section:NewButton("Finish secret quest", "Finish secret quest and get a cool animation", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5.8554, -49, -3.0091, -0.0631, 0, 0.998, 0, 1, 0, -0.998, 0, -0.0631)
+end)
+
+Section:NewButton("Hidden lounge", "Visit the hidden lounge", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4.4492, 219.1999, 65.7167, 1, 0, 0.0042, 0, 1, 0, -0.0042, 0, 1)
+end)
+
+Section:NewButton("Spawn", "Go back to spawn", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-60.0016, 177, 103.0001, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+end)
+
+Section:NewButton("Shed", "Shed", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-608.4879, 180.6313, -5.8761, -0.0137, 0, -0.9999, 0, 1, 0, 0.9999, 0, -0.0137)
+end)
+
+Section:NewButton("Hidden room", "Just a hidden room", function()
+    game:GetService("Workspace").CORE.verb.key:Destroy()
+    task.wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31.5, 118.1, -1, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+local Tab = Window:NewTab("Settings")
+local Section = Tab:NewSection("GUI")
+
+Section:NewKeybind("Toggle", "Button to toggle GUI", Enum.KeyCode.E, function()
+	Library:ToggleUI()
+end)
+
+local Tab = Window:NewTab("Settings")
+local Section = Tab:NewSection("GUI")
+
+local Tab = Window:NewTab("¨Credits")
+local Section = Tab:NewSection("rej#0001")
+
+end
+end
