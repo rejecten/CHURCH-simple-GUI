@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rejecten/CHURCH-simple-GUI/main/script"))()
