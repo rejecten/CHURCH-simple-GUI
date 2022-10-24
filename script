@@ -1,6 +1,6 @@
 if game.placeId == 1068523756 then do
 
-wait(5)
+wait(3) 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
 local Window = Library.CreateLib("CHURCH", "BloodTheme")
